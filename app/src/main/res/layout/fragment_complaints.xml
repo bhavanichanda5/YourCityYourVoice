@@ -1,0 +1,210 @@
+ <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+     android:background="@color/white"
+        tools:context=".complaints">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:background="@color/zxing_transparent"
+            android:rowCount="3">
+
+            <!-- Card 1: Yours -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#747577"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/posted"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/posted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Posted"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2: Upcoming -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#912751"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/voted"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/baseline_fingerprint_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Voted"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3: Popular -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/seegreen"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/nearby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/baseline_near_me_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Nearby"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 4: Bookmarked -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#5F158C"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/baseline_location_city_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="City"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 5: All -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#E64A19"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/your_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/yours" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Your Activity"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#388E3C"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/baseline_search_24"
+                        app:tint="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Search"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+     </LinearLayout>

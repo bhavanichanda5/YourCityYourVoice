@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <size android:height="5dp" /> <!-- ✅ Divider height yaha set karo -->
+    <solid android:color="@color/white" /> <!-- ✅ Divider color yaha set karo -->
+
+</shape>

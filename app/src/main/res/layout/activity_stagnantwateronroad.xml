@@ -1,0 +1,281 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".stagnantwateronroad">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55sp"
+        android:background="@color/seegreen"
+        android:title="Yellow Spot"
+        android:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/baseline_arrow_back_24" />
+
+    <FrameLayout
+        android:id="@+id/mapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true" >
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Map displaying user location" />
+
+    </FrameLayout>
+
+    <!-- Move map to adjust -->
+
+    <!-- Address Field -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Complaint Type"
+                app:hintTextColor="@color/Blue"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/Blue"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.OutlinedBox"> <!-- For corner radius -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvComplaintType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:textColor="@color/seegreen"
+                    android:textStyle="bold"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Enter your Email Address"
+                app:hintTextColor="@color/Blue"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/Blue"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.OutlinedBox"> <!-- For corner radius -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvPostedBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:textColor="@color/Blue"
+                    android:textStyle="bold"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvSelectArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Select area"
+                android:textSize="18dp"
+                android:textColor="@color/Blue"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="location Icon" />
+
+                <EditText
+                    android:id="@+id/etSelectArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvSelectArea"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edit_text_back"
+                    android:hint="Location.."
+                    android:padding="8dp"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <!-- Additional Information -->
+            <TextView
+                android:id="@+id/tvAddInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etSelectArea"
+                android:textSize="18dp"
+                android:textColor="@color/Blue"
+                android:layout_marginStart="16dp"
+                android:text="Add more information"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/info"
+                    android:contentDescription="location Icon" />
+
+                <EditText
+                    android:id="@+id/etAddInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAddInfo"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/edit_text_back"
+                    android:hint="Dirty, lack of public toilets, etc."
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Buttons for Quick Selection -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_height="35dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/etAddInfo"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/btnDirty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#ADACAB"
+                        android:textStyle="bold"
+                        android:background="@drawable/edit_text_back"
+                        android:layout_marginLeft="5dp"
+                        android:text="Clogged Drain" />
+
+                    <TextView
+                        android:id="@+id/btnLackToilet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#ADACAB"
+                        android:textStyle="bold"
+                        android:background="@drawable/edit_text_back"
+                        android:layout_marginLeft="5dp"
+                        android:text="Dengue" />
+
+                    <TextView
+                        android:id="@+id/btnNearby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#ADACAB"
+                        android:textStyle="bold"
+                        android:background="@drawable/edit_text_back"
+                        android:layout_marginLeft="5dp"
+                        android:text="Diseases-spreading" />
+                    <TextView
+                        android:id="@+id/smelly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#ADACAB"
+                        android:textStyle="bold"
+                        android:background="@drawable/edit_text_back"
+                        android:layout_marginLeft="5dp"
+                        android:text="malaria" />
+                    <TextView
+                        android:id="@+id/unhygin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#ADACAB"
+                        android:textStyle="bold"
+                        android:background="@drawable/edit_text_back"
+                        android:layout_marginLeft="5dp"
+                        android:text="Public Health Hazard" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Add a Photo -->
+            <TextView
+                android:id="@+id/tvAddPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Add a photo"
+                android:textSize="18dp"
+                android:textColor="@color/Blue"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="147dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="30dp"
+                app:cardCornerRadius="5dp">
+
+                <ImageView
+                    android:id="@+id/ivAddPhoto"
+                    android:layout_width="147dp"
+                    android:layout_height="142dp"
+                    android:layout_marginBottom="12dp"
+                    android:contentDescription="Profile Picture"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_5" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivAddPhoto"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/Darkgreen"
+                android:text="Done" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

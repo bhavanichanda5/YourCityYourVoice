@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/events"
+        android:icon="@drawable/event"
+        android:title="Events" />
+    <item
+        android:id="@+id/plus"
+        android:icon="@drawable/baseline_add_24"
+        android:title="" />
+    <item
+        android:id="@+id/complaint"
+        android:icon="@drawable/complaint_icon"
+        android:title="Complaints" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile" />
+</menu>

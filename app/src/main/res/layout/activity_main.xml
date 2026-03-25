@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="504dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Your City, Your Voice"
+            android:textAlignment="center"
+            android:textColor="@color/darkorng"
+            android:textSize="25dp"
+            android:textStyle="bold" /-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="246dp"
+            android:layout_height="105dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            app:srcCompat="@drawable/chasma" />
+
+        <ImageView
+            android:id="@+id/video"
+            android:layout_width="378dp"
+            android:layout_height="255dp"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="422dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            app:srcCompat="@drawable/belowposter" />
+
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_below="@id/linearLayout"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/fourlion"/>
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_below="@id/imageView3"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Powered by Swachhata Mission Urban"
+        android:textStyle="italic"
+        android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Your City, Your Voice</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Gujarati</item>
+        <item>తెలుగు(Telugu)</item>
+        <item>हिन्दी (Hindi)</item>
+    </string-array>
+</resources>

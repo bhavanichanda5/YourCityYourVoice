@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bakground"
+    android:backgroundTint="@color/seegreen"
+    android:elevation="500dp"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:padding="5sp">
+
+        <TextView
+            android:id="@+id/tv_complaint_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Complaint Title"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ImgUrl"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/baseline_image_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="287dp"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Area Name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/redirectingmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/blue"
+                android:backgroundTint="@color/zxing_transparent"
+                android:contentDescription="redirecting to map"
+                app:srcCompat="@drawable/ic_direction" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_additional_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:paddingTop="4dp"
+            android:text="Additional Info"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textStyle="bold"
+                android:text="Id :"
+                android:padding="2sp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textStyle="bold"
+                android:text="complaint Id"
+                android:textColor="@color/Darkgreen"
+                android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Status :"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Staus"
+                android:padding="5sp"
+                android:textStyle="italic|bold"
+                android:textColor="@color/Blue"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/blue"
+                android:backgroundTint="@color/zxing_transparent"
+                android:contentDescription="Vote to complaint"
+                app:srcCompat="@drawable/baseline_thumb_up_off_alt_24" />
+
+            <ImageButton
+                    android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/blue"
+                android:backgroundTint="@color/zxing_transparent"
+                android:contentDescription="Comment on complaint"
+                app:srcCompat="@drawable/baseline_textsms_24" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/blue"
+                android:backgroundTint="@color/zxing_transparent"
+                android:contentDescription="Share complaint"
+                app:srcCompat="@drawable/ic_share" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

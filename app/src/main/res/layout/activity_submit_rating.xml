@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SubmitRatingActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/seegreen"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="How was your overall experience?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Rating Bar -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:stepSize="1"
+        android:progressTint="@color/gold"/>
+
+    <!-- Rating Description -->
+    <TextView
+        android:id="@+id/ratingDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Excellent"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:paddingBottom="16dp" />
+
+    <!-- Feedback Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tell us your experience"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:padding="16dp"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/feedbackEditText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Write your feedback here..."
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
+
+    <!-- Footer Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Your feedback helps us improve. For support, contact support@yourcityyourvoice.org"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#888888"
+        android:padding="8dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/seegreen"
+        android:padding="12dp"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</LinearLayout>

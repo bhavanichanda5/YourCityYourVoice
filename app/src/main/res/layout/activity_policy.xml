@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/seegreen"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- About Us Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_about_us"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Citizen Complaint Portal is a digital initiative aimed at ensuring transparency and accountability in civic services. Our platform allows users to raise concerns about drainage, roads, electricity, and water services. We connect citizens directly to local authorities for faster resolution."
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Privacy Policy Section with Expandable Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_privacy_policy"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your privacy is important to us. Tap below to read more."
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:paddingTop="8dp"/>
+
+
+                <!-- Expandable Details -->
+                <LinearLayout
+                    android:id="@+id/privacy_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• We collect your name, email, and contact details."
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Your data is used for processing complaints only."
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• We do not share data with third parties without consent."
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="6dp"/>
+                </LinearLayout>
+
+                <!-- Toggle Button -->
+                <TextView
+                    android:id="@+id/tv_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Read More ▼"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:onClick="togglePrivacyContent"/>
+            </LinearLayout>
+
+            <!-- Contact Us Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_contact_us"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For any queries, reach us at:                                                                                                          📧support@citizenportal.com"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:paddingTop="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

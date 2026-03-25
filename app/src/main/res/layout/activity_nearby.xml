@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".nearby">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/seegreen"
+        android:titleTextColor="@android:color/white" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="24dp"
+        android:layout_below="@id/toolbar"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/zxing_transparent"
+                android:src="@drawable/baseline_search_24" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:hint="Search location"
+                android:textColorHint="@color/grey"
+                android:textSize="16sp"
+                android:background="@null"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapWords|textAutoComplete"
+                android:maxLines="1" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/zxing_transparent"
+                android:contentDescription="Search"
+                android:scaleType="centerInside"
+                android:src="@drawable/baseline_location_on_24" />
+
+            <ImageButton
+                android:id="@+id/btnClearSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/zxing_transparent"
+                android:src="@drawable/baseline_close_24"
+                android:contentDescription="Search"
+                android:padding="10dp"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:contentDescription="Map displaying toilet locations" >
+
+        <!-- Floating Action Button for current location -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="Find nearest complaints"
+            android:src="@drawable/ic_location"/>
+    </com.google.android.gms.maps.MapView>
+
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/nearby"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:choiceMode="multipleChoice"
+            android:divider="@color/zxing_transparent"
+            android:dividerHeight="15dp"
+            android:scrollingCache="true" />
+
+        <!-- Empty Image when no upcoming events -->
+        <ImageView
+            android:id="@+id/empty_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/empty_img"
+            android:contentDescription="No upcoming events" />
+    </LinearLayout>
+</LinearLayout>

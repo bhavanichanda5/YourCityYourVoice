@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".complaint_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <!-- Title for Consumer Complaint -->
+            <TextView
+                android:id="@+id/tv_complaint_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is a Consumer Complaint?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"/>
+
+            <!-- Description about Consumer Complaint -->
+            <TextView
+                android:id="@+id/tv_complaint_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Consumers who pay for a specific good or service have the right to take legal action if they receive subpar products or subpar services. The Consumer Protection Act, 2019 (As amended) gives consumers various legal rights and protections. According to this Act, the customer may take a business or service provider to court with a formal complaint. An online consumer complaint is what this specific issue is known as. If the business ignores a legal warning to correct the problem, a complaint is typically made. All necessary information and accompanying documentation must be submitted when registering a complaint. The consumer courts in India offer clients prompt legal counsel and decisions."
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>

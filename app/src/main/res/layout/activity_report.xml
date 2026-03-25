@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".report"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55sp"
+        android:background="@color/seegreen"
+        android:title="Yellow Spot"
+        android:titleTextColor="@android:color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="676dp"
+        android:layout_marginTop="55dp"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        android:src="@drawable/empty_img" />
+
+    <!-- CardView for Input -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:padding="20dp"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <!-- Issue Report Icon -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_bug_report"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report an Issue"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/editIssue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Describe the issue..."
+                android:minLines="4"
+                android:maxLines="4"
+                android:padding="10dp"
+                android:background="@drawable/edit_text_back"
+                android:layout_marginTop="12dp"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/btnSubmitIssue"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/Darkgreen"
+                android:text="Submit Issue"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Floating Action Button for Email -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/white"
+        android:src="@drawable/ic_email"
+        android:contentDescription="Send Email"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/seegreen"
+        app:elevation="8dp"/>
+
+</RelativeLayout>

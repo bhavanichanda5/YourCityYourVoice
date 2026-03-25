@@ -1,0 +1,122 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Consumer Complaint Portal"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn more about the steps for filing a consumer complaint and the eligibility criteria."
+        android:textSize="16sp"
+        android:paddingBottom="24dp"/>
+
+    <!-- Title for Consumer Complaint Info, clickable to navigate -->
+    <TextView
+        android:id="@+id/tv_complaint_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="What is a Consumer Complaint?"
+        android:textSize="18sp"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToComplaintInfo"/>
+    />
+
+
+    <!-- Consumer Complaint Info Text -->
+    <TextView
+        android:id="@+id/tv_complaint_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consumers who pay for a specific good or service have the right to take legal action if they receive subpar products or subpar services. The Consumer Protection Act, 2019 (As amended) gives consumers various legal rights and protections. According to this Act, the customer may take a business or service provider to court with a formal complaint. An online consumer complaint is what this specific issue is known as. If the business ignores a legal warning to correct the problem, a complaint is typically made. All necessary information and accompanying documentation must be submitted when registering a complaint. The consumer courts in India offer clients prompt legal counsel and decisions."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:paddingBottom="16dp"/>
+
+    <!--TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Home Page"
+        android:textSize="18sp"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToHomePage"-->
+
+    <!-- Title for Steps for Filing a Complaint, clickable to navigate -->
+    <TextView
+        android:id="@+id/tv_filing_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steps for Filing a Complaint"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToFilingSteps"/>
+
+    <!-- Title for Eligibility Criteria, clickable to navigate -->
+    <TextView
+        android:id="@+id/tv_eligibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eligibility Criteria"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToEligibility"/>
+    <TextView
+        android:id="@+id/tv_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToMap"/>
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LogOut"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToLogin"/>
+
+</LinearLayout>
+</ScrollView>

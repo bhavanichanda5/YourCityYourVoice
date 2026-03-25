@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/seegreen"
+    android:padding="20dp">
+
+  <!-- Animated Star Icon -->
+  <ImageView
+      android:id="@+id/starIcon"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/ic_start_filled"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="50dp" />
+
+  <!-- Thank You Message -->
+  <TextView
+      android:id="@+id/thankYouMessage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Thank You!"
+      android:textSize="36sp"
+      android:textStyle="bold"
+      android:fontFamily="sans-serif-light"
+      android:textColor="@color/white"
+      android:layout_below="@id/starIcon"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="20dp" />
+
+  <!-- Subtitle -->
+  <TextView
+      android:id="@+id/subtitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="We appreciate your effort and dedication."
+      android:textSize="18sp"
+      android:fontFamily="sans-serif"
+      android:textColor="#FFFFFF"
+      android:layout_below="@id/thankYouMessage"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp" />
+
+  <!-- Call to Action Button -->
+  <Button
+      android:id="@+id/actionButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:backgroundTint="@color/Darkgreen"
+      android:layout_below="@id/subtitle"
+      android:layout_centerHorizontal="true"
+      android:text="Explore More"
+      android:textColor="#FFFFFF"
+      android:textStyle="bold" />
+</RelativeLayout>

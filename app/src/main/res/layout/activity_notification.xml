@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".notification"
+    android:background="@android:color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/seegreen"
+        android:titleTextColor="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/emptyImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty_img"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"/>
+
+    <!-- ListView for Notifications -->
+    <ListView
+        android:id="@+id/lvNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:divider="@color/zxing_transparent"
+        android:dividerHeight="15dp"
+        android:layout_marginTop="10dp"
+        android:choiceMode="multipleChoice"
+        android:scrollingCache="true"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

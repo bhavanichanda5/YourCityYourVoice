@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".post_a_complaint"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55sp"
+        android:background="@color/seegreen"
+        android:subtitle="Post a complaint"
+        android:subtitleTextColor="@android:color/white"
+        android:title="Choose Category"
+        android:titleTextColor="@android:color/white" />
+
+    <ListView
+        android:id="@+id/listViewComplaints"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+
+</RelativeLayout>
