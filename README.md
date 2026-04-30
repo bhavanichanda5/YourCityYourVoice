@@ -1,15 +1,15 @@
 # Citizen Complaint Portal
 
-## 📌 Description
+## Description
 An Android application that allows users to report civic issues such as road damage, drainage, and sanitation problems.
 
-## 🚀 Technologies Used
+## Technologies Used
 - Java
 - Firebase Realtime Database
 - Android Studio
 - Google Maps API
 
-## ✨ Features
+## Features
 - User & Admin modules
 - Real-time complaint tracking
 - Location tagging using Google Maps
