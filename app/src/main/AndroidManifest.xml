@@ -186,7 +186,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyC3nwdGmrEhG32DMYZJ2fO22qt5Oo9OHzk" />
+            android:value="{/*MAP_API_KEY*/}" />
 
         <activity
             android:name=".Location"
